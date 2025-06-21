@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
-import menuIcon from "../assets/menu-icon-hamburger.svg";
-import cancelIcon from "../assets/menu-icon-cancel.svg";
+// import menuIcon from "../assets/menu-icon-hamburger.svg";
+// import cancelIcon from "../assets/menu-icon-cancel.svg";
 import NavButton from "./NavButton";
 
 export default function Nav() {
@@ -42,8 +42,65 @@ export default function Nav() {
           className="flex lg:hidden w-[40px] h-[40px] cursor-pointer"
           onClick={handleMenuOpenButton}
         >
-          {isMenuOpen ? <img src={cancelIcon} alt="menu" className=" bg-white" /> : <img src={menuIcon} alt="menu" className=" bg-white" />}
-          
+          {isMenuOpen ? (
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                y1="-2"
+                x2="28.6924"
+                y2="-2"
+                transform="matrix(0.730323 0.683102 -0.702025 0.712152 8 10.5)"
+                stroke="black"
+                stroke-width="4"
+              />
+              <line
+                y1="-2"
+                x2="28.0896"
+                y2="-2"
+                transform="matrix(0.716329 -0.697763 0.716329 0.697763 10.8787 30.0999)"
+                stroke="black"
+                stroke-width="4"
+              />
+            </svg>
+          ) : (
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="8"
+                y1="9"
+                x2="32"
+                y2="9"
+                stroke="black"
+                stroke-width="4"
+              />
+              <line
+                x1="8"
+                y1="27"
+                x2="32"
+                y2="27"
+                stroke="black"
+                stroke-width="4"
+              />
+              <line
+                x1="8"
+                y1="18"
+                x2="23.2727"
+                y2="18"
+                stroke="black"
+                stroke-width="4"
+              />
+            </svg>
+          )}
         </button>
         <div className="flex-grow flex justify-center items-center h-[40px] lg:h-[80px] bg-white ">
           <h1 className="font-bold text-lg lg:text-3xl  text-center">
@@ -54,12 +111,12 @@ export default function Nav() {
         <button className="lg:absolute flex w-[40px] h-[40px] lg:w-[80px] lg:h-[80px] lg:right-0 lg:translate-x-1/2 lg:z-50">
           <div className="w-full h-full bg-white rounded-full [filter:drop-shadow(0_0_6px_rgba(0,0,0,0.25))] flex items-center justify-center">
             <div className="">
-                <div className="relative w-[43px] h-[40px] scale-50 lg:scale-100 ">
-                 <div className="absolute inset-0 bg-[#535353]  rounded-[80%_40%_60%_0%] z-10"></div>
-                 <div className="absolute inset-0 top-2 bottom-2 bg-white rounded-[70%_30%_50%_0%] z-20"></div>
-                 <div className="absolute top-4 right-2 w-2 h-2 bg-[#535353] rounded-full z-30"></div>
-                 <div className="absolute top-3.5  right-0 w-3 h-[7px] translate-x-[87.5%] bg-[#535353] rounded-[0%_100%_0%_0%] z-30 rotate-[-10deg] origin-left"></div>
-            </div>
+              <div className="relative w-[43px] h-[40px] scale-50 lg:scale-100 ">
+                <div className="absolute inset-0 bg-[#535353]  rounded-[80%_40%_60%_0%] z-10"></div>
+                <div className="absolute inset-0 top-2 bottom-2 bg-white rounded-[70%_30%_50%_0%] z-20"></div>
+                <div className="absolute top-4 right-2 w-2 h-2 bg-[#535353] rounded-full z-30"></div>
+                <div className="absolute top-3.5  right-0 w-3 h-[7px] translate-x-[87.5%] bg-[#535353] rounded-[0%_100%_0%_0%] z-30 rotate-[-10deg] origin-left"></div>
+              </div>
             </div>
           </div>
         </button>
