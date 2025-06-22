@@ -1,12 +1,26 @@
-# React + Vite
+# 白頭翁介紹網站
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+這是一個介紹白頭翁的網站，旨在提供關於這種鳥類的詳細資訊。
 
-Currently, two official plugins are available:
+## 使用技術
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* **前端框架**: React
+* **開發語言**: JavaScript
+* **建置工具**: Vite
+* **樣式方案**: Tailwind CSS
 
-## Expanding the ESLint configuration
+## 專案結構
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+此專案主要包含以下幾個組件：
+* `App.jsx`: 應用程式的根組件，整合了 `Nav` 和 `Main` 組件。
+* `Nav.jsx`: 導覽列組件，包含漢堡選單（移動版）和導覽按鈕。它處理選單的開啟/關閉狀態以及導覽按鈕的選取狀態。
+* `NavButton.jsx`: 導覽按鈕組件，用於顯示各個導覽選項，並在被選中時改變樣式。
+* `Main.jsx`: 主要內容區塊組件，包含一個橫幅圖片和多個 `ContentSection`。
+* `ContentSection.jsx`: 內容區塊組件，用於顯示帶有標題和內文的區塊。
+
+## 功能特色
+
+* **響應式設計**: 網站針對不同螢幕尺寸進行了優化，提供良好的使用者體驗。
+* **導覽選單**: 包含一個在小螢幕上可摺疊的漢堡選單。
+* **內容展示**: 清晰地展示白頭翁的外觀、棲地和食性等資訊。
+* **互動式導覽按鈕**: 導覽按鈕在被選中時會高亮顯示。
